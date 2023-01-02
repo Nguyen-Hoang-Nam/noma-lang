@@ -61,3 +61,48 @@ add(param_1, param_2) {
 
 add(1, 1) |> IO.print() // 2
 ```
+
+### 1.2 Operator
+
+Noma keep most of operators from other languages. `+, -, *, /, >, >=, <, <=, =, ==, >>, <<, !, ||, &&, |>`
+
+## 2 Structure
+
+To make project structure more clear, there are some conventions.
+
+### 2.1 Project
+
+The project is a set of Noma language files.
+
+### 2.2 File
+
+The file is a system file that contain one or multiple modules.
+
+### 2.3 Module
+
+Module define a Object that does not inside any other Object. By convention, name of Module shoud be Pascal case.
+
+Ex:
+
+```text
+// module_name.noma file
+ModuleName {
+  
+}
+```
+
+### 2.4 Function
+
+Function is a Object inside Module. By convention, name of function shoud be snake case.
+
+Ex:
+
+```text
+// module_name.noma file
+ModuleName {
+  public function_name(param_1, param_2) {}
+}
+
+// other.noma file
+ModuleName.function_name(1, 1)
+```
