@@ -2,33 +2,33 @@
 
 The specification for consistent programming language aims to erase the new overhead syntaxes.
 
-## Syntax
+## 1 Syntax
 
-### Object
+### 1.1 Object
 
 Object is term to describe things that relative with syntax `{}`. There are 2 relative positions for syntax `{}`.
 
-#### Metadata (Head position)
+#### 1.1.1 Metadata (Head position)
 
 Metadata is in the Head of syntax `{}`, this is a special part of Object because it need parser to create a special case to match it. Because of this reason, there are by default have limit of Metadata of each Object.
 
-##### __NAME__
+##### 1.1.1.1 `__NAME__`
 
 There are 2 ways to access data inside Object by assigning object with a variable or define a name.
 
 Ex: `name {}`
 
-##### __PARAMS__
+##### 1.1.1.2 `__PARAMS__`
 
-In case of Function, to get the parameters Object use __PARAMS__.
+In case of Function, to get the parameters Object use `__PARAMS__`.
 
 Ex: `(param_1, param_2) {}`
 
-#### Content (Body position)
+#### 1.1.2 Content (Body position)
 
 Content part contain data and logic for its Object. To do these things, Content need some special syntax.
 
-##### `public` syntax
+##### 1.1.2.1 `public` syntax
 
 Inside Content everything is private, so to get its data this variables must have `public` syntax before it. Because of immutation, when outside of Object get `public` data, they only get data at the time public.
 
@@ -48,7 +48,7 @@ IO.print(example_pubic.var_3) // 3
 
 Important thing, there are no ways to assign data inside Object even public variables as Object is immutable.
 
-##### Return
+##### 1.1.2.2 Return
 
 To deal with logic, Object always return the last line of its Content.
 
